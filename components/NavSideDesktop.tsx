@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link"
 import { usePathname } from "next/navigation";
 import Logo from "../public/logo.svg"
-import { LayoutDashboard } from "lucide-react";
+import { BookText, LayoutDashboard, UsersRound, Map } from "lucide-react";
 
 
 export default function NavSideDesktop() {
@@ -19,10 +19,10 @@ export default function NavSideDesktop() {
                         <Image src={Logo} alt="Staff Edu"  />
                         Staff Edu</h2>
                     <ul className="space-y-2">
-                        <li><Link href="/" className={`flex items-center gap-x-[10px] px-4 hover:bg-white/20 p-2 rounded text-white ${pathname === '/' ? 'bg-white/20' : ''}`}>  <LayoutDashboard color="#E65F2B" /> Dashboard</Link></li>
-                        <li><Link href="/course" className={`block px-4 hover:bg-white/20 p-2 rounded text-white ${pathname === '/course' ? 'bg-white/20' : ''}`}>Courses</Link></li>
-                        <li><Link href="/employee" className={`block px-4 hover:bg-white/20 p-2 rounded text-white ${pathname === '/employee' ? 'bg-white/20' : ''}`}>Employees</Link></li>
-                        <li><Link href="/roadmap" className={`block px-4 hover:bg-white/20 p-2 rounded text-white ${pathname === '/roadmap' ? 'bg-white/20' : ''}`}>RoadMaps</Link></li>
+                        <li><Link href="/" className={`flex items-center gap-x-[10px] px-4 hover:bg-white/20 p-2 rounded text-white ${pathname === '/' ? 'bg-white/20' : ''}`}>  <LayoutDashboard className=" text-orange" /> Dashboard</Link></li>
+                        <li><Link href="/course" className={`flex items-center gap-x-[10px] px-4 hover:bg-white/20 p-2 rounded text-white ${pathname === '/course' ? 'bg-white/20' : ''}`}> <BookText className="text-orange" /> Courses</Link></li>
+                        <li><Link href="/employee" className={`flex items-center gap-x-[10px] px-4 hover:bg-white/20 p-2 rounded text-white ${pathname === '/employee' ? 'bg-white/20' : ''}`}>   <UsersRound  className="text-orange" /> Employees</Link></li>
+                        <li><Link href="/roadmap" className={`flex items-center gap-x-[10px] px-4 hover:bg-white/20 p-2 rounded text-white ${pathname === '/roadmap' ? 'bg-white/20' : ''}`}> <Map className=" text-orange" /> RoadMaps</Link></li>
                     </ul>
                 </div>
             </div>
